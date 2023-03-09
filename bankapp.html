@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>BSU BANK</title>
+
+<style type="text/css">
+    Body {
+  font-family: Calibri, Helvetica, sans-serif;
+  background-color: rgb(252, 252, 7);
+}
+
+.container{
+
+width:90%;
+
+border: 1px solid black;
+
+padding: 10px;
+
+}
+
+.accInfo{
+
+border:1px solid black;
+
+}
+
+.container ul{
+
+list-style:none;
+
+padding:0;
+
+margin:0;
+
+}
+
+.container li{
+
+display: block;
+
+padding: 15px;
+
+border:1px solid #101010;
+
+margin-bottom: 30px;
+
+border-radius: 3px;
+
+}
+
+.container li > label{
+
+display: block;
+
+float: left;
+
+margin-top: -19px;
+
+background: #fafaf9;
+
+height: 14px;
+
+padding: 2px 5px 2px 5px;
+
+color: #534242;
+
+font-size: 14px;
+
+overflow: hidden;
+
+font-family: Arial, Helvetica, sans-serif;
+
+}
+
+</style>
+
+<script src="script.js"></script>
+
+</head>
+
+<body>
+
+<h1>Welcome to BSU BANKING!</h1>
+
+<div class="container">
+
+<form>
+
+<ul>
+
+<li class="accInfo">
+
+<label>Account Info </label>
+
+<table cellpadding="5">
+
+<tr>
+
+<td>
+
+Name:
+
+<input type="text" name="accountinfo" id="accountinfo" value="">
+
+</td>
+
+<td>
+
+Account Type:<br>
+
+<input type="radio" name="acctype" value="1" checked> Saving
+
+<input type="radio" name="acctype" value="2"> Checking
+
+</td>
+
+</tr>
+
+</table>
+
+</li>
+
+<li class="transInfo">
+
+<label>Transactions</label>
+
+<table cellpadding="5" border="0" width="100%">
+
+<tr>
+
+<td>
+
+Amount
+
+<input type="text" name="amntinfo" id="amntinfo" value="">
+
+</td>
+
+<td>
+
+Transfer From
+
+<select name="transFrm" id="transFrm">
+
+<option value="0"> </option>
+
+<option value="1">Saving</option>
+
+<option value="2">Checking</option>
+
+</select>
+
+Transfer To
+
+<select name="transTo" id="transTo">
+
+<option value="0"> </option>
+
+<option value="1">Saving</option>
+
+<option value="2">Checking</option>
+
+</select><br>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colspan="2">
+
+<div style="padding-top:10px;">
+
+<span style="padding-right:15%;"><button type="button" name="deposit" id="deposit" style="padding:5px;" onclick="return depositAmt();" >Deposit</button></span>
+
+<span style="padding-right:15%;"><button type="button" name="withdrw" id="withdrw" style="padding:5px;" onclick="return withdrawAmt();">Withdraw</button></span>
+
+<span style="padding-right:15%;"><button type="button" name="tranfr" id="tranfr" style="padding:5px;" onclick="return transferAmt();" >Transfer</button></span>
+
+<span style=""><button type="button" name="viewTrans" id="viewTrans" style="padding:5px;" onclick="return viewTransaction();">View Transaction</button></span>
+
+</div>
+
+</td>
+
+</tr>
+
+</table>
+
+</li>
+
+<li class="accInfo">
+
+<label for="viewTransInfo"> View Transactions </label>
+
+<div id="accDesc">
+
+Name: - <br>
+
+Account: - <br>
+
+Initial Balance: $10000.00 <br>
+
+<table cellpadding="2" cellpadding="2" border="1" width="100%">
+
+<tr>
+
+<th>Description</th>
+
+<th>Amount</th>
+
+<th>Balance</th>
+
+</tr>
+
+<tr>
+
+<td colspan="3" align="center">No transaction found</td>
+
+</tr>
+
+</table>
+
+</div>
+
+</li>
+
+</ul>
+
+</form>
+
+</div>
+
+</body>
+
+</html>
